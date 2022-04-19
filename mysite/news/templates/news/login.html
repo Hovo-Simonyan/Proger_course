@@ -1,0 +1,21 @@
+{% extends 'news/base.html' %}
+
+{% block title%}
+Добавить новость
+{% endblock%}
+
+{% block sidebar %}
+{% include 'news/_sidebar.html'%}
+{% endblock%}
+
+{% block content %}
+<h1>Войты</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+</form>
+
+
+{% endblock%}
